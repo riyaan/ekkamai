@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a457061e-26a3-40e4-9d04-04b860e8a7e6" name="pyAlarmCommunicationDiagram" linkedPackageId="24863c8e-dfd7-499b-b0b7-ea071a61e990" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a457061e-26a3-40e4-9d04-04b860e8a7e6" name="pyAlarmCommunicationDiagram" linkedPackageId="24863c8e-dfd7-499b-b0b7-ea071a61e990" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="93802a85-d7f0-4fdd-9e48-97da226496a6" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -102,6 +102,12 @@
               <referencedTypeMoniker Id="0d933f01-50dd-4711-9c5d-46d4c7ea3a03" LastKnownName="bool" />
             </type_NamedElement>
           </property>
+          <property Id="26d69492-b0eb-42b5-9fb1-7fee99376164" name="isActive" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07d49a61-0856-4439-960e-8e8ffdb50cf6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0d933f01-50dd-4711-9c5d-46d4c7ea3a03" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="43eb6251-5e43-429f-81f2-271a6acd9049" name="createAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -162,6 +168,14 @@
                   <elementDefinition Id="d74fc4b1-3281-43d1-a896-ac3668f9ec7a" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="8701a184-4fea-4a59-9d20-7d7405d3de95" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cff37949-b61b-495c-87fc-e2dfd0ae22d6" name="IsActive" direction="In">
+                  <elementDefinition Id="07937143-f024-4075-b895-57bb5ea7ba9e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ed6b661-ef14-4b14-8563-561eed0feb90" LastKnownName="Boolean" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -299,6 +313,14 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="417fd99b-9a48-425e-8a52-756877885851" name="IsActive" direction="In">
+                  <elementDefinition Id="ef77ddd7-69cd-461f-8e12-af7385e24027" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ed6b661-ef14-4b14-8563-561eed0feb90" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation Id="7ef956ca-b737-4fce-b12a-de0eb0a5e791" name="newAlarmRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -421,6 +443,14 @@
                   <elementDefinition Id="7d99e7c5-c429-43a8-baf4-6bb214c3afb5" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="4429c823-41f0-4ec9-ad59-f4019e9e75f4" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="632898fc-12c2-412f-8469-8519d0cdce1a" name="IsActive" direction="In">
+                  <elementDefinition Id="89954b4b-3a03-4100-bc17-cf2b2883bc8f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ed6b661-ef14-4b14-8563-561eed0feb90" LastKnownName="Boolean" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

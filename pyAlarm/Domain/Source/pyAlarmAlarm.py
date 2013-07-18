@@ -10,6 +10,7 @@ class Alarm(object):
     volume = 0
     isRepeatable = False
     time = datetime.now()
+    active = False
 
     def __init__(self):
         name = ""
@@ -18,11 +19,13 @@ class Alarm(object):
         volume = 0
         isRepeatable = False
         time = datetime.now()
+        active = False
 
-    def __init__(self, name, alarmDay, sound, volume, isRepeatable, time):
+    def __init__(self, name, alarmDay, sound, volume, isRepeatable, time, active):
         self.name = name
         self.alarmDay = alarmDay
         self.sound = sound
         self.volume = volume
         self.isRepeatable = isRepeatable
         self.time = time
+        self.active = active

@@ -39,12 +39,12 @@ class Alarm(object):
             self.logger.Log('Alarm name is in use.')
             return False
 
-    def SaveAlarm(self, alarmName, alarmDay, alarmTime, alarmSound, alarmVolume, snoozeLength, isRepeatable):       
+    def SaveAlarm(self, alarmName, alarmDay, alarmTime, alarmSound, alarmVolume, snoozeLength, isRepeatable, isActive):       
 
         self.logger.Log('Begin - SaveAlarm.')
 
         alarmDay = AlarmDay(alarmDay, alarmTime)
-        alarm = DomainAlarm(alarmName, alarmDay, alarmSound, alarmVolume, isRepeatable, alarmTime)
+        alarm = DomainAlarm(alarmName, alarmDay, alarmSound, alarmVolume, isRepeatable, alarmTime, isActive)
 
         hal = pyAlarmHAL.HAL()
         hal.StoreAlarm(alarm)

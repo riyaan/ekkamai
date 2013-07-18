@@ -1,7 +1,5 @@
 import datetime
 import formatter
-import pickle
-
 import os
 
 # using a package instead of adding multiple paths to PYTHONPATH
@@ -23,6 +21,8 @@ logger.Log('Start - Main thread of execution.')
 core = pyCore()
 core.Poll()
 
+v = raw_input("Press any key to exit ...")
+
 #alarmController = Alarm()
 #alarmList = alarmController.RetrieveAlarmList()
 #for alarm in alarmList:    
@@ -38,6 +38,6 @@ core.Poll()
 #    snoozeLength = datetime.time(0,15)
 
 #    logger.Log('End - Main thread of execution.')
-#    alarmController.SaveAlarm(ALARM_NAME, "Monday", alarmTime, "elixir", 5, snoozeLength, True)
+#    alarmController.SaveAlarm(ALARM_NAME, "Monday", alarmTime, "elixir", 5, snoozeLength, True, True)
 
 #v = raw_input("Alarm creation in process...")

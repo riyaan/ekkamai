@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="1f343af5-a219-4e0f-ae7a-ac5cfb7ecddd"
   name="pyAlarmModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -482,6 +482,25 @@ Basic Path:
                 LastKnownLocation="pyAlarmModelingProject.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="07d49a61-0856-4439-960e-8e8ffdb50cf6"
+            name="isActive"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc"
+                LastKnownName="bool"
+                LastKnownLocation="pyAlarmModelingProject.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -585,6 +604,19 @@ Basic Path:
                     <undefinedTypeMoniker
                       Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc"
                       LastKnownName="bool"
+                      LastKnownLocation="pyAlarmModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="07937143-f024-4075-b895-57bb5ea7ba9e"
+                  name="IsActive"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
                       LastKnownLocation="pyAlarmModelingProject.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -843,6 +875,19 @@ Basic Path:
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ef77ddd7-69cd-461f-8e12-af7385e24027"
+                  name="IsActive"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="pyAlarmModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
@@ -1071,6 +1116,19 @@ Basic Path:
                     <undefinedTypeMoniker
                       Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc"
                       LastKnownName="bool"
+                      LastKnownLocation="pyAlarmModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89954b4b-3a03-4100-bc17-cf2b2883bc8f"
+                  name="IsActive"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
                       LastKnownLocation="pyAlarmModelingProject.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4213,22 +4271,22 @@ Basic Path:
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="692d857e-b97e-45da-ac0d-dceb1d6aff69"
-            name="OperandOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="ec632652-e42f-416c-aef7-b62c75cec96b"
-                LastKnownName="Poller"
-                LastKnownLocation="pyAlarmModelingProject.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="0ec4c643-6843-44db-bd28-8d7b2597b292"
             name="OperandOccurrenceSpecification13">
             <covered>
               <lifelineMoniker
                 Id="938e8219-a32f-4778-b9a5-63e11d734767"
                 LastKnownName="AlarmController"
+                LastKnownLocation="pyAlarmModelingProject.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="692d857e-b97e-45da-ac0d-dceb1d6aff69"
+            name="OperandOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="ec632652-e42f-416c-aef7-b62c75cec96b"
+                LastKnownName="Poller"
                 LastKnownLocation="pyAlarmModelingProject.uml" />
             </covered>
           </operandOccurrenceSpecification>

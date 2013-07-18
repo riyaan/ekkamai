@@ -29,7 +29,7 @@ class HAL(object):
 
         self.logger.Log("Start - Retrieving a list of alarms.")
 
-        dirList = glob.glob(self.ALARM_LOCATION)        
+        dirList = glob.glob(self.ALARM_LOCATION)
 
         self.logger.Log(("Number of items in directory - {0}.").format(len(dirList)))
 
