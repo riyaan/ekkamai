@@ -16,12 +16,8 @@ ALARM_NAME = "myThirdAlarm"
 # initialize the logger
 logger = KivyLogging(LOG_LEVEL, SCRIPT_FILE_NAME)
 
-logger.Log('Start - Main thread of execution.')
-
-core = pyCore()
-core.Poll()
-
-v = raw_input("Press any key to exit ...")
+# main thread of execution
+#logger.Log('Start - Main thread of execution.')
 
 #alarmController = Alarm()
 #alarmList = alarmController.RetrieveAlarmList()
@@ -34,10 +30,14 @@ v = raw_input("Press any key to exit ...")
 
 #if not successfulRequest:
 
-#    alarmTime = datetime.datetime(2013, 7, 19, 5, 0, 0)
+#    alarmTime = datetime.datetime(2013, 7, 17, 5, 0, 0)
 #    snoozeLength = datetime.time(0,15)
 
 #    logger.Log('End - Main thread of execution.')
-#    alarmController.SaveAlarm(ALARM_NAME, "Monday", alarmTime, "elixir", 5, snoozeLength, True, True)
+#    alarmController.SaveAlarm(ALARM_NAME, "Monday", alarmTime, "dynamo", 5, snoozeLength, True, True)
 
-#v = raw_input("Alarm creation in process...")
+# Polling functionality
+core = pyCore()
+core.Poll()
+
+v = raw_input("Press any key to exit ...")

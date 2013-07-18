@@ -32,6 +32,8 @@
     <Compile Include="Domain\Source\pyAlarmAlarm.py" />
     <Compile Include="Domain\Source\pyAlarmDevice.py" />
     <Compile Include="Domain\Source\__init__.py" />
+    <Compile Include="Domain\Tests\pyAlarmAlarmTest.py" />
+    <Compile Include="Domain\Tests\__init__.py" />
     <Compile Include="Domain\__init__.py" />
     <Compile Include="HAL\Source\pyAlarmHAL.py" />
     <Compile Include="HAL\Source\__init__.py" />

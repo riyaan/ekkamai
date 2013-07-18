@@ -37,7 +37,9 @@ class pyCore(object):
         alarmList = self.hal.RetrieveAllAlarms()
 
         for alarm in alarmList:
-            if alarm.time <= datetime.now() & alarm.
-            self.logger.Log(("Alarm name - {0}Alarm sound - {1}").format(alarm.name, alarm.sound))
+            d = datetime.now()
+            if (alarm.time <= d) & (alarm.isActive == True):
+                self.logger.Log(("Alarm time - {0}____Current time - {1}____Is Active? - {2}").
+                                format(alarm.time, d, alarm.isActive))
 
         self.logger.Log("End - Processing")
