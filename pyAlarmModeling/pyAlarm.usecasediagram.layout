@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.5" name="pyAlarm">
+  <useCaseModelRootMoniker Id="c1899dec-d4cc-4b35-bef9-53db7cece3ed" />
+  <nestedChildShapes>
+    <actorShape Id="2c4a6143-55e9-4737-bb88-ecc511c3ca2b" absoluteBounds="1.125, 1.5, 0.5, 1.125" isReference="false" heightOffset="0">
+      <actorMoniker Id="5346b358-f104-4fe1-8af2-8cfc5fe2cd9a" LastKnownName="User" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="8fb81d85-aeed-442d-8c11-332336790462" absoluteBounds="3, 0.75, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="b62e5cf5-9946-4f55-a1d1-fc4f6e362d34" LastKnownName="AddNewAlarm" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.625 : 1.94444444444444); (3.22103464417928 : 1.19076141802645)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="922219bb-0666-4bd2-94dc-14bf777beea7" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="2c4a6143-55e9-4737-bb88-ecc511c3ca2b" />
+        <useCaseShapeMoniker Id="8fb81d85-aeed-442d-8c11-332336790462" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="d4a1e5f2-c3d7-4a45-a150-7cd4f4ae1384" absoluteBounds="3.125, 2, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="891d4550-c67f-4dba-9202-8d683635de34" LastKnownName="EditExistingAlarm" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.625 : 2.08173076923077); (3.13988457910573 : 2.1982603522389)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="eeb37aa2-a2bc-4d6d-9ec1-800f25dba23e" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="2c4a6143-55e9-4737-bb88-ecc511c3ca2b" />
+        <useCaseShapeMoniker Id="d4a1e5f2-c3d7-4a45-a150-7cd4f4ae1384" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="4b62387a-6d12-4101-b393-a781845cd1f9" absoluteBounds="3.125, 3.375, 1.75, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="9c822b22-2723-4baa-9d62-8d2003d0d41d" LastKnownName="DeleteExistingAlarm" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.625 : 2.21130952380952); (3.62136031586333 : 3.39961923563293)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="968b8d77-c0aa-47da-b3ee-f9f8ae355640" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="2c4a6143-55e9-4737-bb88-ecc511c3ca2b" />
+        <useCaseShapeMoniker Id="4b62387a-6d12-4101-b393-a781845cd1f9" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <commentShape Id="f4b59249-8f8e-496f-890e-59ee515dc7ed" absoluteBounds="0.625, 5.125, 4.125, 3.375" customColor="251, 247, 200">
+      <commentMoniker Id="a0df78ba-71cd-442e-9f13-012e5c5057b0" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentShape Id="21ef0d16-55bd-47d7-aba0-213e2f9df2b9" absoluteBounds="0.625, 9.25, 4.125, 2" customColor="251, 247, 200">
+      <commentMoniker Id="d2fc106b-d4da-490a-a240-00b078e35997" />
+      <relativeChildShapes />
+    </commentShape>
+    <actorShape Id="cba462a5-1dad-498c-9ab0-1643ddc5189a" absoluteBounds="8, 1.75, 0.5, 1.125" isReference="false" heightOffset="0">
+      <actorMoniker Id="7fac9a12-96ed-4e4b-9001-b9dbd8d3f5d7" LastKnownName="pyAlarmPoller" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="a5c29150-eaac-4d68-971e-bf7f2ffb9d37" absoluteBounds="5.25, 1, 1.5, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ea43f876-2a6a-4565-9d77-79764bb042f0" LastKnownName="PollForActiveAlarms" />
+      <relativeChildShapes />
+    </useCaseShape>
+  </nestedChildShapes>
+</useCaseDiagram>

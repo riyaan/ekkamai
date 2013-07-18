@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9d1b56ec-4f06-4067-88f5-1765681927d9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>pyAlarm.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>pyAlarm</Name>
+    <RootNamespace>pyAlarm</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Source\AlarmController.py" />
+    <Compile Include="Controller\Source\__init__.py" />
+    <Compile Include="Controller\__init__.py" />
+    <Compile Include="Core\Source\pyAlarmCore.py" />
+    <Compile Include="Core\Source\__init__.py" />
+    <Compile Include="Core\__init__.py" />
+    <Compile Include="Domain\Source\pyAlarmAlarmDay.py" />
+    <Compile Include="Domain\Source\pyAlarmAlarm.py" />
+    <Compile Include="Domain\Source\pyAlarmDevice.py" />
+    <Compile Include="Domain\Source\__init__.py" />
+    <Compile Include="Domain\__init__.py" />
+    <Compile Include="HAL\Source\pyAlarmHAL.py" />
+    <Compile Include="HAL\Source\__init__.py" />
+    <Compile Include="HAL\__init__.py" />
+    <Compile Include="Logging\Source\pyAlarmLogging.py" />
+    <Compile Include="Logging\Source\__init__.py" />
+    <Compile Include="Logging\__init__.py" />
+    <Compile Include="pyAlarm.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\Source" />
+    <Folder Include="Core\Tests" />
+    <Folder Include="Core\Source\" />
+    <Folder Include="Domain" />
+    <Folder Include="Domain\Tests\" />
+    <Folder Include="Domain\Source" />
+    <Folder Include="HAL" />
+    <Folder Include="HAL\Source" />
+    <Folder Include="Logging" />
+    <Folder Include="Logging\Source" />
+    <Folder Include="Controller" />
+    <Folder Include="Core\" />
+    <Folder Include="UI" />
+    <Folder Include="UI\Source" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="14f27084-5ed9-45a7-a086-316266a05e4c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="25f866a0-0ef6-44b0-8d63-09fa7680dd9c" name="UI Layer">
+      <description>Provides the User Interaction Feature</description>
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1f4ec334-2ee9-45cd-a70f-047833d749e0" direction="Forward">
+          <layerMoniker Id="6f4b8096-9595-42fb-942d-6a2cf30c084b" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2e042c99-f6a7-4843-af78-2fa09599814e" direction="Forward">
+          <layerMoniker Id="6b92618c-6ac2-4398-b1d0-cf4f841fe2ca" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="b8549961-9a4a-412a-a2b9-5b8ab7d236cf" name="&lt;&lt;subsystem&gt;&gt; pyAlarmUI" />
+      </childLayers>
+    </layer>
+    <layer Id="c2d99892-260d-43e7-a955-65c2974ba7e1" name="Hardware Abstraction Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="530c45bf-36c8-492a-aebd-ff52fbf77447" direction="Forward">
+          <layerMoniker Id="3866a5e8-8883-43b3-a21c-d552cb9cd632" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="50c0021a-af8e-4aad-92e0-31d69460a965" direction="Forward">
+          <layerMoniker Id="6b92618c-6ac2-4398-b1d0-cf4f841fe2ca" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="8b03d567-4299-4878-920f-92571b34c478" name="&lt;&lt;subsystem&gt;&gt; pyAlarmHAL" />
+      </childLayers>
+    </layer>
+    <layer Id="6f4b8096-9595-42fb-942d-6a2cf30c084b" name="Domain Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="e2a402c0-177e-4ffb-b7ac-ba32f21da835" direction="Forward">
+          <layerMoniker Id="c2d99892-260d-43e7-a955-65c2974ba7e1" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="605a9177-d721-4d21-8e51-96e8ae487c8b" direction="Forward">
+          <layerMoniker Id="6b92618c-6ac2-4398-b1d0-cf4f841fe2ca" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="c68a2a51-49a8-4a00-ad20-a20863b14dcf" name="&lt;&lt;subsystem&gt;&gt; pyAlarmAlarm" />
+        <layer Id="32f8899e-9d4d-49fd-8b73-dabf630669d3" name="&lt;&lt;subsystem&gt;&gt; pyAlarmTime" />
+      </childLayers>
+    </layer>
+    <layer Id="3866a5e8-8883-43b3-a21c-d552cb9cd632" name="Device" />
+    <layer Id="6b92618c-6ac2-4398-b1d0-cf4f841fe2ca" name="Logging/Introspection Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b0f8121e-7836-453b-87ff-9574d746bc67" direction="Forward">
+          <layerMoniker Id="85e94b30-eb77-484a-a86b-2a3f8965fdf0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="abd06467-7f57-4249-a8f7-267bbc41cf8b" name="&lt;&lt;subsystem&gt;&gt; pyAlarm Logging" />
+      </childLayers>
+    </layer>
+    <layer Id="85e94b30-eb77-484a-a86b-2a3f8965fdf0" name="Python Logging" />
+    <layer Id="0b57dae8-3cc0-4859-b89c-d24106936c23" name="Core Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="49d49160-4638-428a-9851-fef27e945786" direction="Forward">
+          <layerMoniker Id="c2d99892-260d-43e7-a955-65c2974ba7e1" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="00cf3000-3a3c-4a15-b446-7d06ec05010e" name="&lt;&lt;subsystem&gt;&gt; pyAlarmCore" />
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a457061e-26a3-40e4-9d04-04b860e8a7e6" name="pyAlarmCommunicationDiagram" linkedPackageId="24863c8e-dfd7-499b-b0b7-ea071a61e990" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="93802a85-d7f0-4fdd-9e48-97da226496a6" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8bce4b36-9dfa-4ce7-87b4-c12dc07a8dab" />
+        <targetEnds>
+          <association Id="9e6ff608-0681-4ceb-b227-0a4359beca54" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e4de5eb1-448b-4abf-a1ad-5105ce63fded" LastKnownName="AlarmUI &lt;&lt;Boundary&gt;&gt;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34aa9955-5f10-4c86-ad94-c56111ed69cb" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="443f29ff-8715-42fd-aae6-6a30d201c494" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="03157798-0965-4d7f-a314-63e4995e59a0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="35843fdd-c025-4c90-90a4-f70ee30dd615" name="Lower" value="1">
+                      <elementDefinition Id="3721d6cf-c377-45a2-ac56-8f3673a1527c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="423168d2-7a1c-47ba-a17a-06cb6863916a" name="Upper" value="1">
+                      <elementDefinition Id="5e5e8e49-7184-4ae2-a914-f4997fa97c0d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="04b220d5-1004-44e8-a5e6-eab1f86002a0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7e10e29f-5ed4-4a74-8ed8-91c9d56a722b" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8ca978f4-bc58-4181-8a52-dd674cf7cd0c" name="Alarm &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9f04139a-3d78-42ef-972a-e2cdfa88d5d9" />
+        <targetEnds>
+          <association Id="9c72f115-150c-4e03-9d9b-bc170de5a6ef" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bbdb2d2d-4977-43a9-8413-7df87b35ea7d" LastKnownName="AlarmDay" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="159ac1ec-a9ec-4a05-8f3f-69b7929f02ea" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="81e4e2fb-6ba0-4500-b763-bbe0acc2d539" name="Lower" value="1">
+                      <elementDefinition Id="956868a5-7754-4cbc-8e39-b40e3a49372b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="235a29c1-7a09-40d6-9cdc-85b3e0b76e16" name="Upper" value="*">
+                      <elementDefinition Id="c4876ca2-6470-48d9-bd49-a71e29af4086" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="9672c454-9dd7-4311-8ecf-bcbda5ecdd26" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3406b267-0664-411e-a0d7-73894b137469" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="68ab2a50-7846-43ac-91ef-ce4a48fddd03" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="53cf9bae-8188-47dc-8eb1-8e3cf0488852" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ad775fc3-3ab2-4d6e-b4fd-3e99420bd0b6" name="name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0186d015-317d-4af4-b91d-79a1a3089afc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="54418192-eb52-4f24-8f33-54d5fdc6225d" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="366f71cc-7635-4ac1-9e1f-a6ebdc285cc2" name="time" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="767166d3-d09e-449d-98ca-8db5f60c0d73" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="aeef31f5-c0c2-43ec-98b4-059b90d24927" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="69e3421d-f525-4ed3-a316-16672898fe4d" name="alarmVolume" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3373c218-9821-4aa6-aae3-c34db1b428a9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0acd44bb-a60a-4057-88a5-2cd932878660" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="1f78e0c2-c2a4-433d-bc82-49aec6e5ee8d" name="alarmSound" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="03267b4f-8f3f-4389-8ed3-94a9e711312d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="54418192-eb52-4f24-8f33-54d5fdc6225d" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="472bd83a-ecda-4cf4-b5fc-73e8aebcc9ac" name="snoozeLength" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="79b4752d-7f58-4a30-87be-bac8feeda87a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="aeef31f5-c0c2-43ec-98b4-059b90d24927" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="c7d166cc-0c40-4936-9c3a-569860702085" name="isRepeatable" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8d866950-f202-4dbf-8a3a-1be625b857ba" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0d933f01-50dd-4711-9c5d-46d4c7ea3a03" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="43eb6251-5e43-429f-81f2-271a6acd9049" name="createAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="961c93cd-8033-4e8d-b082-21430f2ff545" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b48330ad-79af-4b3d-99ea-9557fb313bcd" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="1d18c89b-f5d2-4544-bbb2-43230a66f984" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="24710b80-a970-4ccd-9ea9-7488231ab47c" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe75fdf4-4269-421b-8bb1-27ae90acf879" name="alarmDay" direction="In" isUnique="false">
+                  <lowerValueInternal>
+                    <literalString Id="6e718dd6-23be-4d7a-be9d-67d4befd2613" name="Lower" value="1">
+                      <elementDefinition Id="ba3da022-fce3-4b03-93c1-1da36781c699" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="839635de-f488-456e-8a6b-8e9cadf052bb" name="Upper" value="*">
+                      <elementDefinition Id="f850aaad-7904-4a20-8dc9-9bad68fef941" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2f6a3b6d-d31f-4e26-8416-ee47b8f6270b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="898b18a6-ea77-4c7e-929c-ecb5cdbaa064" LastKnownName="Alarm &lt;&lt;Entity&gt;&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8b54b8c-be3f-40a0-9c23-719b4c98e055" name="alarmSound" direction="In" isUnique="false">
+                  <elementDefinition Id="81869a7c-18fd-4046-bff5-cce42e839bf7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="56713add-508f-49e5-bfa0-caa8cdff6c54" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7c440f1b-b920-4c7d-b6c8-d096e6ebdf89" name="alarmVolume" direction="In" isUnique="false">
+                  <elementDefinition Id="307f5e07-ceb0-4bbb-87ac-f8c47d7d4ae1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b1e70032-3b28-4c67-b059-c4bf3ebfa4a6" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4a28bd2f-3d0d-47f2-9b6c-35ad36d8ede6" name="snoozeLength" direction="In" isUnique="false">
+                  <elementDefinition Id="077d77a2-3bd4-4c52-9d3f-401446aa67cb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f33a707c-cadf-4712-9b6c-4f4f866d74b9" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0f28525f-a13e-48de-a823-67cb09674d14" name="IsRepeatable" direction="In" isUnique="false">
+                  <elementDefinition Id="d74fc4b1-3281-43d1-a896-ac3668f9ec7a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8701a184-4fea-4a59-9d20-7d7405d3de95" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="08375d66-44b6-412b-bc65-2e6f9e14fc8e" name="notify" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3634af64-563d-411f-923b-b2cdef8f7604" />
+          </operation>
+          <operation Id="934fc7e8-5cd2-4347-8094-25153ccaf4e5" name="snooze" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="18df686f-a9a4-4161-86e3-49647b65ee3f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e4de5eb1-448b-4abf-a1ad-5105ce63fded" name="AlarmUI &lt;&lt;Boundary&gt;&gt;" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7c5db03e-059c-45d6-8186-6857dd851b5b" />
+        <targetEnds>
+          <association Id="5d90c547-4525-4baf-8b2c-c234b86cf8cb" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="421a6df2-facd-4c9e-92e7-8d22fa7ab773" LastKnownName="AlarmController &lt;&lt;Control&gt;&gt;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92a9ed9d-f226-4230-9153-81b9c487eb6d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7ffde691-ead7-48d4-8770-7c2fe92b4c35" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c72cf1c9-07af-4f67-bf4e-8fb3f8414770" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c57f41c1-7d62-4ec6-8710-4f3cbeb72fcf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9f698e22-e5cc-4f4c-a852-8692a56a3a82" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="78fe0772-585b-437b-8e5c-b404135359d6" name="alarmList" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="95e26a75-b4fa-47e3-983b-c231e62278c1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ffa3699e-e1e5-4399-8183-4cbb5b9aec60" name="Alarm" direction="In">
+                  <lowerValueInternal>
+                    <literalString Id="664d42de-9e5d-4d1f-b436-3d4f8d4fcba3" name="Lower" value="1">
+                      <elementDefinition Id="e8c50979-5718-4830-9793-14e05e32e480" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="d47e0f27-2c8d-4395-8d7a-7c34d9d5ff9b" name="Upper" value="*">
+                      <elementDefinition Id="9af23c47-b6e4-4535-910c-5a4345497c1d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="54fd937d-e91e-4654-8b0b-62699439988f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="47d7d5fc-3141-49eb-93ff-d3aaee54a9e3" LastKnownName="Alarm &lt;&lt;Entity&gt;&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d2e5da95-02bb-4eb7-915f-2e5da4e0e316" name="populateUI" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5face581-07f8-4e42-8ce6-cec1689d85cb" />
+          </operation>
+          <operation Id="8daec4eb-19b1-4a82-b684-f14521eced99" name="createNewAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a908413d-d415-4bba-b8d7-917a60c98066" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="96c3c854-bcbe-44ac-95cd-ff84979638ae" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="5aabe5ff-30ec-4394-bed5-4061595e5cd3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="54418192-eb52-4f24-8f33-54d5fdc6225d" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3613fe0f-15ea-4b91-b072-5e16ba7c15dd" name="exitApplication" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="41e37721-9263-43e7-8c8e-2131a5ff689c" />
+          </operation>
+          <operation Id="bfc1ba6e-2169-4fdd-b102-84c01d0dc6ee" name="saveAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="86040d46-7e3b-4f90-8012-147f5102c6f1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0c09c9f3-ff8c-4c70-8920-902c47caf02e" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="f3f07d56-3d9b-4d38-993a-a8b43fde62bc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fcb000a-4e82-4735-a6e3-0eeb94a610d5" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="662839bc-cce7-448a-91f9-31693e518e89" name="alarmDay" direction="In">
+                  <elementDefinition Id="fefed0f9-4cdd-4d07-a47f-890b085818a5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a52c8cf2-7356-49d6-a0c2-57280c334dba" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="42a42ef4-2898-490c-889c-2de9ac828f8b" name="alarmTime" direction="In">
+                  <elementDefinition Id="a3c6f42c-f0c8-4aa3-b0ca-a36d9edde201" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="aeef31f5-c0c2-43ec-98b4-059b90d24927" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="818b5354-eaf6-40fd-9d35-187082adb3ff" name="alarmSound" direction="In" isUnique="false">
+                  <elementDefinition Id="c19df6d6-8a3a-4f18-bcbd-82b8571e6de0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="54418192-eb52-4f24-8f33-54d5fdc6225d" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="160530a2-e1d8-4c46-98ad-2e5d24bf47c0" name="alarmVolume" direction="In" isUnique="false">
+                  <elementDefinition Id="1adb45bf-1b2c-4f11-8a92-60444e3e3469" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1d41428e-f880-4a45-8941-d79037c3c6fa" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="80ec3b69-edbd-4472-ba29-cb4ae92a27bf" name="snoozeLength" direction="In" isUnique="false">
+                  <elementDefinition Id="0e1e0bf5-293e-43f5-9c83-566d71532b4e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b5af7b43-a1bb-4a8d-8096-83fb1dfbc11a" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2bd30256-f4c6-47b2-8bd9-fd62b9ee526b" name="IsRepeatable" direction="In" isUnique="false">
+                  <elementDefinition Id="09dddad1-c631-4a3d-b63a-88d000091e93" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fad0ffa-0cdd-41ef-a486-7d896bd90c4d" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7ef956ca-b737-4fce-b12a-de0eb0a5e791" name="newAlarmRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="30067c43-01b5-4cb6-bd21-b56388e4cff0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3526feda-7882-4ce5-a317-8753205525dd" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="e0ddd619-c321-433c-84b8-958548f0ec8c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="61f3677f-8782-43ad-b0b1-23d09ae6a213" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="421a6df2-facd-4c9e-92e7-8d22fa7ab773" name="AlarmController &lt;&lt;Control&gt;&gt;" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5e29bdd7-ca49-4983-b18c-6316b2c1b635" />
+        <targetEnds>
+          <association Id="a03a7ef2-25b4-4669-b623-c932cd8679ba" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8ca978f4-bc58-4181-8a52-dd674cf7cd0c" LastKnownName="Alarm &lt;&lt;Entity&gt;&gt;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="127d2f6f-c9af-462c-89da-ad8424d7aed6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a2a3191b-a290-4284-96f5-0773db6d63fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31632caa-3481-495e-a889-5bf83bd73d3a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4a1c4446-00d4-42d5-8e11-35172714fbb3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="78fe782d-77ea-4083-8aa5-95ece82e3f00" />
+          </association>
+          <association Id="6c62b1da-27f2-491b-a66a-dcdc75888f7b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="109c4b67-b7c4-4ad2-9625-d80e005d797e" LastKnownName="Device &lt;&lt;Entity&gt;&gt;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1ccaccf5-1834-45f5-b4d8-e41da2f952d9" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a39a0b22-1f69-4d72-b30f-18181bbb1500" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d065de7-8f0b-4dd7-901a-337920b8ce42" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1bea987d-0988-4e38-b114-0924191b7afa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="85316dcf-e078-4323-bc14-3ccf4eac42b8" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="45669272-17e0-49a3-9c78-d3c5f4390511" name="saveAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8007c8fe-f0dc-4735-907b-d84459e6e8ab" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fd80dcdb-2376-4f40-a967-6a09fc58edd2" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="66b2642d-574f-48fd-9a43-d45a390f340d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bef9d457-05c9-4e37-852c-95e2c0f03c0b" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0d787f25-123c-496e-8cca-b88959fcdc85" name="alarmDay" direction="In" isUnique="false">
+                  <lowerValueInternal>
+                    <literalString Id="da15f3a8-6f2e-4146-89b3-5fd5bcd9ca8d" name="Lower" value="1">
+                      <elementDefinition Id="854dcc11-a384-451a-bb6e-71d314d5f41c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="39fc0496-e5fe-40b8-9d71-6c5bc902d308" name="Upper" value="*">
+                      <elementDefinition Id="cbebb9c6-5756-453f-8e46-ef7b1f319397" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="32bdc01b-a52e-47f3-b254-0e816ef2de61" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a52c8cf2-7356-49d6-a0c2-57280c334dba" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="87d5083e-ddce-4ae5-97b5-2f313009769f" name="alarmTime" direction="In">
+                  <elementDefinition Id="d9adc726-9899-4916-bfee-094392a015b5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="aeef31f5-c0c2-43ec-98b4-059b90d24927" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ad39df32-4cbf-4e3d-9be8-881806d28d0e" name="alarmSound" direction="In" isUnique="false">
+                  <elementDefinition Id="f3885bd7-fd58-4152-af6e-64e009d36084" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="da83c737-1b65-405d-9a06-21851d9a3518" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5db93f84-4363-477d-8565-d488e466185d" name="alarmVolume" direction="In" isUnique="false">
+                  <elementDefinition Id="f0260a26-19aa-46c4-ab25-e3c3533e4ccf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6f0eecad-810c-4c0e-bc44-0efc8673451c" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c2b5cc26-83dd-4631-906a-d3f702a83cd1" name="snoozeLength" direction="In" isUnique="false">
+                  <elementDefinition Id="1d242bab-e957-4a15-875c-0d6ef7d30be0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ce56f16c-7fff-4567-bf00-91ab40a466fb" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab0a001f-5dd5-40be-b522-e45a6124d222" name="IsRepeatable" direction="In" isUnique="false">
+                  <elementDefinition Id="7d99e7c5-c429-43a8-baf4-6bb214c3afb5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4429c823-41f0-4ec9-ad59-f4019e9e75f4" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c29a5faf-c07b-4205-ab3d-c65353d9f163" name="createNewAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="720bd180-a102-4c58-a034-612efc601540" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="861fb48d-179f-43e1-b6e8-88dd038bb096" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="4d385340-c96a-403b-89ca-d21fd5fd6da5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="54418192-eb52-4f24-8f33-54d5fdc6225d" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="17d0c043-4fa3-4f8f-8869-08f7574ab9e6" name="retrieveAllAlarms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6d38f14-059d-41ca-b26e-5798a1ae227c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a315bba3-e9bb-4808-ae76-70e72844b66d" direction="Return">
+                  <lowerValueInternal>
+                    <literalString Id="e413d309-8130-4fe1-8e80-286b4ac49364" name="Lower" value="1">
+                      <elementDefinition Id="726217ad-f175-41f9-98ca-6ccdfac9f952" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="603833dd-71b2-40df-bc93-195d2f140533" name="Upper" value="*">
+                      <elementDefinition Id="dbc712d0-df41-4b5a-87f5-d3e36c0a7e9a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="02266f16-7358-45a8-abad-0ddb1b0f1e4d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bffbca5-6424-482d-9b37-a5a95a5e1591" LastKnownName="Alarm &lt;&lt;Entity&gt;&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6245f1b8-0aa4-409e-bbcd-ab7d377071fa" name="newAlarmRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b6ebfa4-3326-40fb-a368-f9d638eed3d4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="57e033ab-2502-40a9-aa80-93ebe62e45fa" name="name" direction="In" isUnique="false">
+                  <elementDefinition Id="2c702d90-7430-40ab-addc-4e85f18c09a6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4b312960-4ee9-4033-8d5d-cae6f5ab5c44" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="54418192-eb52-4f24-8f33-54d5fdc6225d" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="aeef31f5-c0c2-43ec-98b4-059b90d24927" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7775c9c4-228e-4917-bcdd-4191882fb2e9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bbdb2d2d-4977-43a9-8413-7df87b35ea7d" name="AlarmDay" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6522b4fc-c987-4e75-81d1-3c1e33d87a8c" />
+        <ownedAttributesInternal>
+          <property Id="d68ab9c0-f3ad-426d-a428-9fd7f7de0404" name="time" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28c59bc1-5fdd-47b1-8610-ed6f94adfde5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="aeef31f5-c0c2-43ec-98b4-059b90d24927" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="a0ef2ce7-a41c-4a0e-9e5b-59c7fb5ec42e" name="day" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e2dea3d-1ff8-4a11-88d3-9797e1810a42" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="01c08e5b-6b53-4c47-b114-74b87247f0ec" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="01c08e5b-6b53-4c47-b114-74b87247f0ec" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0acd44bb-a60a-4057-88a5-2cd932878660" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c4690213-a6c5-4063-8ced-af350f0edc75" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d933f01-50dd-4711-9c5d-46d4c7ea3a03" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="47d7d5fc-3141-49eb-93ff-d3aaee54a9e3" name="Alarm &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="pyAlarmModelingProject::Alarm &lt;&lt;Entity&gt;&gt;">
+        <elementDefinition Id="9f04139a-3d78-42ef-972a-e2cdfa88d5d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1ed6b661-ef14-4b14-8563-561eed0feb90" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="109c4b67-b7c4-4ad2-9625-d80e005d797e" name="Device &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3658027e-eae2-42e6-a16f-a10df119f0f6" />
+        <ownedOperationsInternal>
+          <operation Id="1e966e0e-48f8-4fce-b304-dc56beb5e1d6" name="IsStorageSpaceSufficient" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cd844d19-83a5-4482-b760-165993a646d7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="06c49ff1-8b61-48ab-83b8-ec1ef62270b0" direction="Return" isUnique="false">
+                  <elementDefinition Id="dcf4c1d2-1aec-4780-847d-9c1d4291c643" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ed6b661-ef14-4b14-8563-561eed0feb90" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="213a15a0-02df-4453-a3c9-279d79f4d6b9" name="storeAlarm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ef1c7a90-c087-4f65-b7da-7f8a354baf7e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1c7f2236-51f8-4994-9c60-ee1e83386090" name="alarm" direction="In" isUnique="false">
+                  <elementDefinition Id="d848d0ea-e065-46ed-9451-47e34da46987" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b031e110-91aa-4825-86c3-142560fc08fc" LastKnownName="Alarm &lt;&lt;Entity&gt;&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fe41a811-b6f4-4258-bbe0-bc00d9f2f1cd" name="retrieveAllAlarms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f4c77fd-4820-49d1-9444-c02e71f61abd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6f309c63-c6a1-428c-8987-f61a2b8a9433" direction="Return">
+                  <lowerValueInternal>
+                    <literalString Id="bf660b32-8b3a-48bc-8935-cc32609636aa" name="Lower" value="1">
+                      <elementDefinition Id="d93071b5-798d-4281-8718-646890af3cb8" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="727d557d-a2fa-45c3-be25-08d2d244d3a6" name="Upper" value="*">
+                      <elementDefinition Id="a97acc64-d729-4544-8a38-2edd999b0f44" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="fe8c7362-de60-4bf0-8cbd-629680b5687c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="970d9e08-fa02-4635-9534-3e4d72deb236" LastKnownName="Alarm &lt;&lt;Entity&gt;&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="952247c7-e678-43f4-b186-9af530551ea9" name="IsAlarmNameAvailable" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f1d13a8-21c6-4afb-8678-38614aed5fd5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ce1dec47-3fdb-4080-84ec-eae5986b9387" direction="Return" isUnique="false">
+                  <elementDefinition Id="31f57d9d-aadd-4ff1-bc53-80d0cdc4ff49" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cfe78afd-e512-4ca6-a715-411fa1f5d169" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="6fcb000a-4e82-4735-a6e3-0eeb94a610d5" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1d41428e-f880-4a45-8941-d79037c3c6fa" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c4690213-a6c5-4063-8ced-af350f0edc75" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b5af7b43-a1bb-4a8d-8096-83fb1dfbc11a" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7775c9c4-228e-4917-bcdd-4191882fb2e9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6fad0ffa-0cdd-41ef-a486-7d896bd90c4d" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bef9d457-05c9-4e37-852c-95e2c0f03c0b" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="da83c737-1b65-405d-9a06-21851d9a3518" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6f0eecad-810c-4c0e-bc44-0efc8673451c" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c4690213-a6c5-4063-8ced-af350f0edc75" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ce56f16c-7fff-4567-bf00-91ab40a466fb" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7775c9c4-228e-4917-bcdd-4191882fb2e9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4429c823-41f0-4ec9-ad59-f4019e9e75f4" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="24710b80-a970-4ccd-9ea9-7488231ab47c" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="898b18a6-ea77-4c7e-929c-ecb5cdbaa064" name="Alarm &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="pyAlarmModelingProject::Alarm &lt;&lt;Entity&gt;&gt;">
+        <elementDefinition Id="9f04139a-3d78-42ef-972a-e2cdfa88d5d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="56713add-508f-49e5-bfa0-caa8cdff6c54" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b1e70032-3b28-4c67-b059-c4bf3ebfa4a6" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="c4690213-a6c5-4063-8ced-af350f0edc75" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f33a707c-cadf-4712-9b6c-4f4f866d74b9" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="7775c9c4-228e-4917-bcdd-4191882fb2e9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8701a184-4fea-4a59-9d20-7d7405d3de95" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="c9a72c9d-165f-46e5-a1c2-e03f76dc9dbc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b031e110-91aa-4825-86c3-142560fc08fc" name="Alarm &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="pyAlarmModelingProject::Alarm &lt;&lt;Entity&gt;&gt;">
+        <elementDefinition Id="9f04139a-3d78-42ef-972a-e2cdfa88d5d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="970d9e08-fa02-4635-9534-3e4d72deb236" name="Alarm &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="pyAlarmModelingProject::Alarm &lt;&lt;Entity&gt;&gt;">
+        <elementDefinition Id="9f04139a-3d78-42ef-972a-e2cdfa88d5d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6bffbca5-6424-482d-9b37-a5a95a5e1591" name="Alarm &lt;&lt;Entity&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="pyAlarmModelingProject::Alarm &lt;&lt;Entity&gt;&gt;">
+        <elementDefinition Id="9f04139a-3d78-42ef-972a-e2cdfa88d5d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="61f3677f-8782-43ad-b0b1-23d09ae6a213" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4b312960-4ee9-4033-8d5d-cae6f5ab5c44" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="6bab3e86-2e78-4d8c-af40-f233ea9b199f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cfe78afd-e512-4ca6-a715-411fa1f5d169" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a52c8cf2-7356-49d6-a0c2-57280c334dba" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="24863c8e-dfd7-499b-b0b7-ea071a61e990" name="pyAlarmModelingProject">
+    <elementDefinition Id="1f343af5-a219-4e0f-ae7a-ac5cfb7ecddd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7b20f13f-9ad7-4033-8d88-3a639ad6680f">
+        <profileInstance Id="a671adf4-d45d-4112-a1c6-704efbecfe1f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5bda1955-476c-4176-b0ec-e3f9556b1461">
+        <profileInstance Id="71108084-9ec8-4ad2-9a44-41a6e9093a4d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

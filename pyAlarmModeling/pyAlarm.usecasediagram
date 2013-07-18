@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c1899dec-d4cc-4b35-bef9-53db7cece3ed" name="pyAlarm" linkedPackageId="33c200f0-9f03-4227-9fbd-567a78955d3a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="a0df78ba-71cd-442e-9f13-012e5c5057b0">
+      <elementDefinition Id="cd3951d3-8aef-409a-bd63-4301f7a6fdd2" />
+      <body>Use Case:	AddNewAlarm
+
+Goal:		The user can setup/create a new alarm
+
+Precondition:	The user should have enough free space on the device.
+
+PostCondition:	The alarm should be created successfully.
+
+Basic Path:
+1. The user launches the app.
+2. Selects 'New Alarm' from the menu options.
+3. The system will then check if there is sufficient storage space.
+3a. Insufficient storage space.
+3b. Sufficient storage space. (Continue)
+4. The user provides a name for the alarm.
+5. The user then selects the time.
+6. The user selects the days on which the alarm should be activated.
+7. The user selects whether the alarm should repeat, or is once off.
+8. The user saves the changes made.
+9. The alarm is made active.
+
+Exception: (Insufficient storage space)
+1. Alert user to the error.</body>
+    </comment>
+    <comment Id="d2fc106b-d4da-490a-a240-00b078e35997">
+      <elementDefinition Id="0e20e5c4-b87f-4b09-b25a-fa59aebe95ad" />
+      <body>Use Case:	EditAlarm
+
+Goal:		The user can edit an existing new alarm
+
+Precondition:	The alarm should exist on the device.
+
+PostCondition:	The alarm should be updated successfully.
+
+Basic Path:
+1. The user launches the app.
+2. Selects 'Edit Alarm' from the menu options.
+3. The user provides new alarm details. 
+4. The user saves the changes made.</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="5346b358-f104-4fe1-8af2-8cfc5fe2cd9a" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d6336ece-6cf5-49a2-9d0f-91778080000d" />
+        <targetEnds>
+          <association Id="922219bb-0666-4bd2-94dc-14bf777beea7" isDerived="false" sourceEndRoleName="User" targetEndRoleName="AddNewAlarm" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b62e5cf5-9946-4f55-a1d1-fc4f6e362d34" LastKnownName="AddNewAlarm" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="510560cc-50f6-4e35-a95d-a3fb2a417cc8" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3245dd96-77d0-41ae-a859-768a55dc674d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6b4441d5-b1aa-49d0-8645-32a0e1f5b87a" name="AddNewAlarm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="66a2dd74-a767-47ef-86ec-20cfba8850fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="04f94f16-6828-42bd-84d2-3bc37309dc38" />
+          </association>
+          <association Id="eeb37aa2-a2bc-4d6d-9ec1-800f25dba23e" isDerived="false" sourceEndRoleName="User" targetEndRoleName="EditExistingAlarm" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="891d4550-c67f-4dba-9202-8d683635de34" LastKnownName="EditExistingAlarm" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6c604eb-19a6-4678-8ac3-18ae232cefdb" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="198da097-6ffa-4a36-92f9-80e9fabf0497" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="51f4363e-2d41-4784-bbfa-d59647a3f127" name="EditExistingAlarm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9fe77f17-7cc6-4bb9-9779-a19493b5f702" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="217de326-1aa7-4bfe-a80e-0e0ba699ecd4" />
+          </association>
+          <association Id="968b8d77-c0aa-47da-b3ee-f9f8ae355640" isDerived="false" sourceEndRoleName="User" targetEndRoleName="DeleteExistingAlarm" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c822b22-2723-4baa-9d62-8d2003d0d41d" LastKnownName="DeleteExistingAlarm" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d8fc7a8-7b31-41a1-8606-a75c74e6782f" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5c8eee74-4bb5-4d25-b072-591dcdf5cc65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dcb15de2-e286-422b-8e54-da298a533d5d" name="DeleteExistingAlarm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aef11850-d14b-4bdc-bb22-43bea3fb4266" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="54e41d7e-caf7-4490-b1e4-77b7cc433cad" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b62e5cf5-9946-4f55-a1d1-fc4f6e362d34" name="AddNewAlarm" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9a6efab6-c3d2-41e1-817c-b9ede9a967d7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="891d4550-c67f-4dba-9202-8d683635de34" name="EditExistingAlarm" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1a6ac692-cabd-469d-8ec2-e6d5605a9e34" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c822b22-2723-4baa-9d62-8d2003d0d41d" name="DeleteExistingAlarm" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4750538-5f50-4784-bebf-1ac8c7241f5b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="7fac9a12-96ed-4e4b-9001-b9dbd8d3f5d7" name="pyAlarmPoller" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8bb569c4-7371-4d9a-a0ff-717fc5bbfda8" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ea43f876-2a6a-4565-9d77-79764bb042f0" name="PollForActiveAlarms" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="605ef43a-8f07-498f-84d2-e66a3f46accc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="33c200f0-9f03-4227-9fbd-567a78955d3a" name="pyAlarmModelingProject">
+    <elementDefinition Id="1f343af5-a219-4e0f-ae7a-ac5cfb7ecddd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="028b4c70-af24-46a4-9627-3eb63dd50573">
+        <profileInstance Id="107fe142-fd87-4628-8e3a-358aa03f2327" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e7d3a28b-3c96-4c4b-b83f-cbe8088ee69b">
+        <profileInstance Id="19f11156-4599-42c2-98ee-52f87f239ccf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
