@@ -4,6 +4,7 @@ import time
 
 from datetime import datetime
 
+from Controller.Source.AlarmController import Alarm
 from HAL.Source.pyAlarmHAL import HAL
 from Logging.Source.pyAlarmLogging import KivyLogging
 
@@ -19,14 +20,17 @@ class pyCore(object):
         self.logger = KivyLogging(self.LOG_LEVEL, self.SCRIPT_FILE_NAME)    
 
     def Poll(self):
-
         self.logger.Log("Start - Poll.")
+        self.logger.Log("Thread name: {0}".format(threading.currentThread().name))
         self.hal = HAL()
 
-        while True:
+        count = 0
+
+        while count < 10 :
             t = threading.Timer(1, self.Processing)
             t.start()
-            time.sleep(3)
+            time.sleep(2)
+            count+=1
                         
         self.logger.Log("End - Poll.")
 
@@ -36,10 +40,17 @@ class pyCore(object):
 
         alarmList = self.hal.RetrieveAllAlarms()
 
+        self.logger.Log("Number of alarms: {0}".format(len(alarmList)))
+
         for alarm in alarmList:
             d = datetime.now()
             if (alarm.time <= d) & (alarm.isActive == True):
-                self.logger.Log(("Alarm time - {0}____Current time - {1}____Is Active? - {2}").
-                                format(alarm.time, d, alarm.isActive))
+                self.logger.Log(("Alarm name - {0}____Alarm time - {1}____Current time - {2}____Is Active? - {3}").
+                                format(alarm.name, alarm.time, d, alarm.isActive))
+
+                # notify that the alarm has sound
+                alarmController = Alarm()
+                alarmController.Notify(alarm)
+
 
         self.logger.Log("End - Processing")

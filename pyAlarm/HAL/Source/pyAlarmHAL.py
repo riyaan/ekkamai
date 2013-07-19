@@ -37,6 +37,8 @@ class HAL(object):
         for i in range(0, len(dirList)):
              self.logger.Log(("Item - {0}.").format(i))
              object = self.Deserialize(dirList[i])
+             self.logger.Log(("Alarm Name: {0}.").format(object.name))
+
              alarmList.append(object)
 
         self.logger.Log("End - Retrieving a list of alarms.")

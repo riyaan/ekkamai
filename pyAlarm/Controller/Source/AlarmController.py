@@ -52,3 +52,9 @@ class Alarm(object):
         self.logger.Log('End - SaveAlarm.')
 
         return True
+
+    def Notify(self, alarm):
+        # notify the UI
+        
+        self.logger.Log('Begin - Notify.')
+        self.logger.Log('End - Notify.')

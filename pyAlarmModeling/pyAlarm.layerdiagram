@@ -59,6 +59,9 @@
         <dependencyFromLayerToLayer Id="49d49160-4638-428a-9851-fef27e945786" direction="Forward">
           <layerMoniker Id="c2d99892-260d-43e7-a955-65c2974ba7e1" />
         </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="c3a3ea79-0a81-40b5-a2d4-c2370c9e8fef" direction="Forward">
+          <layerMoniker Id="6f4b8096-9595-42fb-942d-6a2cf30c084b" />
+        </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <childLayers>
         <layer Id="00cf3000-3a3c-4a15-b446-7d06ec05010e" name="&lt;&lt;subsystem&gt;&gt; pyAlarmCore" />

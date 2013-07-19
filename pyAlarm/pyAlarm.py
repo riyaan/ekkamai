@@ -1,23 +1,36 @@
 import datetime
-import formatter
-import os
+import formatter, os, threading
 
 # using a package instead of adding multiple paths to PYTHONPATH
 from Controller.Source.AlarmController import Alarm
+from Core.Source.pyAlarmCore import pyCore
 from Domain.Source import pyAlarmAlarm
 from Logging.Source.pyAlarmLogging import KivyLogging
-from Core.Source.pyAlarmCore import pyCore
 
 LOG_LEVEL = "DEBUG"
 SCRIPT_FILE_NAME = os.path.basename(__file__)
-
 ALARM_NAME = "myThirdAlarm"
 
 # initialize the logger
 logger = KivyLogging(LOG_LEVEL, SCRIPT_FILE_NAME)
 
 # main thread of execution
-#logger.Log('Start - Main thread of execution.')
+logger.Log('Start - Main thread of execution.')
+logger.Log("Thread name: {0}".format(threading.currentThread().name))
+
+#### Polling functionality - Start
+def Poll():
+    core = pyCore()
+    core.Poll()
+
+logger.Log("Configure 'Polling' thread")
+pollingThread = threading.Thread(target=Poll,name="pollingThread")
+pollingThread.start()
+logger.Log("'Polling' thread has been started")
+
+logger.Log("Continuing 'Main' thread execution.")
+
+#### Polling functionality - End
 
 #alarmController = Alarm()
 #alarmList = alarmController.RetrieveAlarmList()
@@ -36,8 +49,9 @@ logger = KivyLogging(LOG_LEVEL, SCRIPT_FILE_NAME)
 #    logger.Log('End - Main thread of execution.')
 #    alarmController.SaveAlarm(ALARM_NAME, "Monday", alarmTime, "dynamo", 5, snoozeLength, True, True)
 
-# Polling functionality
-core = pyCore()
-core.Poll()
+
 
 v = raw_input("Press any key to exit ...")
+
+
+logger.Log('End - Main thread of execution.')
