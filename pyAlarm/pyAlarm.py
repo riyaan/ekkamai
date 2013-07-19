@@ -1,5 +1,4 @@
-import datetime
-import formatter, os, threading
+import datetime, formatter, os, threading
 
 # using a package instead of adding multiple paths to PYTHONPATH
 from Controller.Source.AlarmController import Alarm
