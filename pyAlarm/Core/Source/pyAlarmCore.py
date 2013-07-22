@@ -1,17 +1,14 @@
-import os
-import threading
-import time
-
-from datetime import datetime
+import datetime, os, threading, time
 
 from Controller.Source.AlarmController import Alarm
+from Globals.Source import pyGlobals
 from HAL.Source.pyAlarmHAL import HAL
 from Logging.Source.pyAlarmLogging import KivyLogging
 
 class pyCore(object):
 
     LOG_LEVEL = "DEBUG"
-    SCRIPT_FILE_NAME = os.path.basename(__file__)
+    SCRIPT_FILE_NAME = os.path.basename(__file__)    
     
     logger = ""
     hal = ""
@@ -22,15 +19,12 @@ class pyCore(object):
     def Poll(self):
         self.logger.Log("Start - Poll.")
         self.logger.Log("Thread name: {0}".format(threading.currentThread().name))
-        self.hal = HAL()
+        self.hal = HAL()        
 
-        count = 0
-
-        while count < 10 :
+        while pyGlobals.IS_RUNNING :
             t = threading.Timer(1, self.Processing)
             t.start()
-            time.sleep(2)
-            count+=1
+            time.sleep(2)            
                         
         self.logger.Log("End - Poll.")
 
@@ -43,7 +37,7 @@ class pyCore(object):
         self.logger.Log("Number of alarms: {0}".format(len(alarmList)))
 
         for alarm in alarmList:
-            d = datetime.now()
+            d = datetime.datetime.now()
             if (alarm.time <= d) & (alarm.isActive == True):
                 self.logger.Log(("Alarm name - {0}____Alarm time - {1}____Current time - {2}____Is Active? - {3}").
                                 format(alarm.name, alarm.time, d, alarm.isActive))

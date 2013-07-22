@@ -4,11 +4,14 @@ import datetime, formatter, os, threading
 from Controller.Source.AlarmController import Alarm
 from Core.Source.pyAlarmCore import pyCore
 from Domain.Source import pyAlarmAlarm
+from Globals.Source import pyGlobals
 from Logging.Source.pyAlarmLogging import KivyLogging
 
 LOG_LEVEL = "DEBUG"
 SCRIPT_FILE_NAME = os.path.basename(__file__)
 ALARM_NAME = "myThirdAlarm"
+
+pyGlobals.IS_RUNNING = True
 
 # initialize the logger
 logger = KivyLogging(LOG_LEVEL, SCRIPT_FILE_NAME)
@@ -48,9 +51,12 @@ logger.Log("Continuing 'Main' thread execution.")
 #    logger.Log('End - Main thread of execution.')
 #    alarmController.SaveAlarm(ALARM_NAME, "Monday", alarmTime, "dynamo", 5, snoozeLength, True, True)
 
+v = raw_input("Press [p]roceed to continue or e[x]it to quit ...")
 
+while v != "x":
+    logger.Log(v)
+    v = raw_input("Press [p]roceed to continue or e[x]it to quit ...")
 
-v = raw_input("Press any key to exit ...")
-
+pyGlobals.IS_RUNNING = False
 
 logger.Log('End - Main thread of execution.')

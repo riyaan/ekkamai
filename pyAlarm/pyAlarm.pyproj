@@ -35,6 +35,9 @@
     <Compile Include="Domain\Tests\pyAlarmAlarmTest.py" />
     <Compile Include="Domain\Tests\__init__.py" />
     <Compile Include="Domain\__init__.py" />
+    <Compile Include="Globals\Source\pyGlobals.py" />
+    <Compile Include="Globals\Source\__init__.py" />
+    <Compile Include="Globals\__init__.py" />
     <Compile Include="HAL\Source\pyAlarmHAL.py" />
     <Compile Include="HAL\Source\__init__.py" />
     <Compile Include="HAL\__init__.py" />
@@ -50,12 +53,14 @@
     <Folder Include="Domain" />
     <Folder Include="Domain\Tests\" />
     <Folder Include="Domain\Source" />
+    <Folder Include="Globals\Source\" />
     <Folder Include="HAL" />
     <Folder Include="HAL\Source" />
     <Folder Include="Logging" />
     <Folder Include="Logging\Source" />
     <Folder Include="Controller" />
     <Folder Include="Core\" />
+    <Folder Include="Globals\" />
     <Folder Include="UI" />
     <Folder Include="UI\Source" />
   </ItemGroup>
