@@ -8,9 +8,7 @@ from Logging.Source.pyAlarmLogging import KivyLogging
 class Alarm(object):
 
     LOG_LEVEL = "DEBUG"
-    SCRIPT_FILE_NAME = path.basename(__file__)
-    
-    logger = ""
+    SCRIPT_FILE_NAME = path.basename(__file__)       
 
     def __init__(self):
         self.logger = KivyLogging(self.LOG_LEVEL, self.SCRIPT_FILE_NAME)

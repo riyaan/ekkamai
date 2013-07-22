@@ -5,26 +5,23 @@ from Globals.Source import pyGlobals
 from HAL.Source.pyAlarmHAL import HAL
 from Logging.Source.pyAlarmLogging import KivyLogging
 
-class pyCore(object):
-
-    LOG_LEVEL = "DEBUG"
-    SCRIPT_FILE_NAME = os.path.basename(__file__)    
+class pyCore(object):    
     
     logger = ""
     hal = ""
 
     def __init__(self):
-        self.logger = KivyLogging(self.LOG_LEVEL, self.SCRIPT_FILE_NAME)    
+        self.logger = KivyLogging(pyGlobals.LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)    
 
     def Poll(self):
         self.logger.Log("Start - Poll.")
         self.logger.Log("Thread name: {0}".format(threading.currentThread().name))
         self.hal = HAL()        
 
-        while pyGlobals.IS_RUNNING :
+        while pyGlobals.IS_RUNNING:
             t = threading.Timer(1, self.Processing)
             t.start()
-            time.sleep(2)            
+            time.sleep(2)
                         
         self.logger.Log("End - Poll.")
 
@@ -45,6 +42,5 @@ class pyCore(object):
                 # notify that the alarm has sound
                 alarmController = Alarm()
                 alarmController.Notify(alarm)
-
 
         self.logger.Log("End - Processing")

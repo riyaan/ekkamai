@@ -1,20 +1,15 @@
-import glob
-import pickle
+import glob, pickle
 
-from os import path
-
+from Globals.Source import pyGlobals
 from Logging.Source.pyAlarmLogging import KivyLogging
 
-class HAL(object):
-    
-    ALARM_LOCATION = "C:\\temp\\*.pkl"
-    LOG_LEVEL = "DEBUG"
-    SCRIPT_FILE_NAME = path.basename(__file__)
-    
-    logger = ""
+class HAL(object):        
+
+    PARENT_DIRECTORY = "C:\\temp\\"
+    EXTENSION = ".pkl"
 
     def __init__(self):
-        self.logger = KivyLogging(self.LOG_LEVEL, self.SCRIPT_FILE_NAME)
+        self.logger = KivyLogging(pyGlobals.LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)
 
     def IsStorageSpaceSufficient(self):
         # TODO: Check if device has sufficient storage
@@ -22,6 +17,20 @@ class HAL(object):
 
     def IsAlarmNameAvailable(self, alarmName):
         # TODO: Check if alarm name is available
+
+        self.logger.Log("Start - IsAlarmNameAvailable")
+
+        dirList = glob.glob(pyGlobals.ALARM_LOCATION)
+
+        for item in dirList:           
+            self.logger.Log(item)
+            if not alarmName in item:
+                self.logger.Log("Not found.")
+            else:
+                self.logger.Log("Found.")
+
+        self.logger.Log("End - IsAlarmNameAvailable")
+
         return True
 
     def RetrieveAllAlarms(self):
@@ -29,9 +38,9 @@ class HAL(object):
 
         self.logger.Log("Start - Retrieving a list of alarms.")
 
-        dirList = glob.glob(self.ALARM_LOCATION)
+        dirList = glob.glob(pyGlobals.ALARM_LOCATION)
 
-        self.logger.Log(("Number of items in directory - {0}.").format(len(dirList)))
+        self.logger.Log(("Number of alarms in directory - {0}.").format(len(dirList)))
 
         alarmList = list()
         for i in range(0, len(dirList)):
@@ -64,7 +73,7 @@ class HAL(object):
 
         self.logger.Log("Start - StoreAlarm.")
 
-        filePath = "C:\\temp\\"+alarm.name+".pkl"
+        filePath = self.PARENT_DIRECTORY+alarm.name+self.EXTENSION
         self.Serialize(alarm, filePath)
 
         self.logger.Log("End - StoreAlarm.")
