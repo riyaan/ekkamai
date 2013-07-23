@@ -5,13 +5,10 @@ from Globals.Source import pyGlobals
 from HAL.Source.pyAlarmHAL import HAL
 from Logging.Source.pyAlarmLogging import KivyLogging
 
-class pyCore(object):    
-    
-    logger = ""
-    hal = ""
+class pyCore(object):
 
     def __init__(self):
-        self.logger = KivyLogging(pyGlobals.LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)    
+        self.logger = KivyLogging(pyGlobals.DEBUG_LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)    
 
     def Poll(self):
         self.logger.Log("Start - Poll.")

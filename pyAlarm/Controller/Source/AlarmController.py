@@ -2,6 +2,8 @@ from os import path
 
 from Domain.Source.pyAlarmAlarm import Alarm as DomainAlarm
 from Domain.Source.pyAlarmAlarmDay import AlarmDay
+from Exceptions.Source.pyException import *
+from Globals.Source import pyGlobals
 from HAL.Source import pyAlarmHAL
 from Logging.Source.pyAlarmLogging import KivyLogging
 
@@ -28,16 +30,33 @@ class Alarm(object):
         if hal.IsStorageSpaceSufficient():
             self.logger.Log('There is sufficient space.')
         else:
-            return False
+            exceptionMsg = "There is insufficient storage space available for alarm creation."
+            self.logger.Log(exceptionMsg, pyGlobals.ERROR_LOG_LEVEL)
+            raise InsufficientStorageSpaceAvailableException(exceptionMsg)
 
         # check if there is already a similarly named alarm
         if hal.IsAlarmNameAvailable(alarmName):
             self.logger.Log('Alarm name is available for use.')
         else:
-            self.logger.Log('Alarm name is in use.')
-            return False
+            exceptionMsg = ("Alarm name '{0}' is already in use.").format(alarmName)
+            self.logger.Log(exceptionMsg, pyGlobals.ERROR_LOG_LEVEL)
+            raise AlarmNameInUseException(exceptionMsg)
 
     def SaveAlarm(self, alarmName, alarmDay, alarmTime, alarmSound, alarmVolume, snoozeLength, isRepeatable, isActive):       
+        """
+        Save an instance of the newly created alarm to the device storage.
+
+        Args:
+            alarmName: The name of the alarm.
+            alarmDay: The day of the week the alarm should be activated. E.g Monday
+            alarmTime: The time the alarm should be activated.
+            alarmSound: The notification sound to be played when the alarm is active.
+            alarmVolume: The volume for the notification sound.
+            snoozeLength: The amount of time the alarm should snooze for.
+            isRepeatable: Should the alarm repeat for the specified days and time.
+            isActive: Is the alarm made active.
+
+        """
 
         self.logger.Log('Begin - SaveAlarm.')
 

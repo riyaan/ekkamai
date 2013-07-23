@@ -1,16 +1,19 @@
+ #!/usr/bin/python2
+
 import datetime, formatter, os, threading
 
 # using a package instead of adding multiple paths to PYTHONPATH
 from Controller.Source.AlarmController import Alarm
 from Core.Source.pyAlarmCore import pyCore
 from Domain.Source import pyAlarmAlarm
+from Exceptions.Source.pyException import *
 from Globals.Source import pyGlobals
 from Logging.Source.pyAlarmLogging import KivyLogging
 
 pyGlobals.IS_RUNNING = True
 
 # initialize the logger
-logger = KivyLogging(pyGlobals.LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)
+logger = KivyLogging(pyGlobals.DEBUG_LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)
 
 # main thread of execution
 logger.Log('Start - Main thread of execution.')
@@ -32,15 +35,20 @@ logger.Log("Continuing 'Main' thread execution.")
 
 ### Alarm Creation Begin
 
+ALARM_NAME = "myFirstAlarm"
+successfulRequest = ""
+
 alarmController = Alarm()
 
-ALARM_NAME = "Ekkamai"
-successfulRequest = alarmController.NewAlarmRequest(ALARM_NAME)
-
-successfulRequest = False
+try:
+    successfulRequest = alarmController.NewAlarmRequest(ALARM_NAME)
+except InsufficientStorageSpaceAvailableException:
+    pyGlobals.IS_RUNNING = False
+    logger.Log("Shutting down...", pyGlobals.ERROR_LOG_LEVEL)
+except AlarmNameInUseException:
+    pass
 
 if successfulRequest:
-
     alarmTime = datetime.datetime(2013, 7, 23, 5, 0, 0)
     snoozeLength = datetime.time(0,15)
 
@@ -49,9 +57,9 @@ if successfulRequest:
 
 ### Alarm Creation End
 
-v = raw_input("Press [p]roceed to continue or e[x]it to quit ...")
+v = "x"
 
-while v != "x":
+while v != "x" and pyGlobals.IS_RUNNING == True:
     logger.Log(v)
     v = raw_input("Press [p]roceed to continue or e[x]it to quit ...")
 

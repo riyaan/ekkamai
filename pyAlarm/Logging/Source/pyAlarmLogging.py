@@ -1,21 +1,28 @@
 import logging
 
-class KivyLogging(object):
+from Globals.Source import pyGlobals
 
-    LOCATION = "C:\\temp\\pyAlarmLog.txt"
-    scriptName = ""
-    logLevel = ""
+class KivyLogging(object):
 
     def __init__(self, logLevel, scriptFileName):
         logging.basicConfig(format='[%(asctime)s] - %(levelname)s : %(message)s', 
-                            filename=self.LOCATION, level=logLevel)
+                            filename=pyGlobals.LOGFILE_LOCATION, level=logLevel)
         self.scriptName = scriptFileName
         self.logLevel = logLevel
 
-    def Log(self, message):
-        if self.logLevel == "DEBUG":
+    def Log(self, message, logLevel=""):
+        """
+        Write the specified message to a log file.
+        """
+
+        if logLevel == "":
+            logLevel = self.logLevel
+
+        if logLevel == "DEBUG":
             logging.debug(("[{0}] - {1}").format(self.scriptName, message))
-        elif self.logLevel == "INFO":
-            logging.info(("[{0}] - {1}").format(self.scriptName, message))
-        elif self.logLevel == "CRITICAL":
-            logging.critical(("[{0}] - {1}").format(self.scriptName, message))      
+        elif logLevel == "CRITICAL":
+            logging.critical(("[{0}] - {1}").format(self.scriptName, message))
+        elif logLevel == "ERROR":
+            logging.error(("[{0}] - {1}").format(self.scriptName, message))
+        elif logLevel == "INFO":
+            logging.info(("[{0}] - {1}").format(self.scriptName, message))        

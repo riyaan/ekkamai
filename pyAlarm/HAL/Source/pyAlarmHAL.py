@@ -1,4 +1,4 @@
-import glob, pickle
+import glob, os, pickle
 
 from Globals.Source import pyGlobals
 from Logging.Source.pyAlarmLogging import KivyLogging
@@ -9,14 +9,13 @@ class HAL(object):
     EXTENSION = ".pkl"
 
     def __init__(self):
-        self.logger = KivyLogging(pyGlobals.LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)
+        self.logger = KivyLogging(pyGlobals.DEBUG_LOG_LEVEL, pyGlobals.SCRIPT_FILE_NAME)
 
     def IsStorageSpaceSufficient(self):
-        # TODO: Check if device has sufficient storage
+        # TODO: Check if device has sufficient storage       
         return True
 
     def IsAlarmNameAvailable(self, alarmName):
-        # TODO: Check if alarm name is available
 
         self.logger.Log("Start - IsAlarmNameAvailable")
 
@@ -26,12 +25,12 @@ class HAL(object):
             self.logger.Log(item)
             if not alarmName in item:
                 self.logger.Log("Not found.")
+                return True
             else:
                 self.logger.Log("Found.")
+                return False
 
         self.logger.Log("End - IsAlarmNameAvailable")
-
-        return True
 
     def RetrieveAllAlarms(self):
         # deserialize objects and return list
