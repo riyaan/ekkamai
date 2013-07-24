@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9d1b56ec-4f06-4067-88f5-1765681927d9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>pyAlarm.py</StartupFile>
+    <StartupFile>UI\Source\kivyCreate.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="bs.py" />
     <Compile Include="Controller\Source\AlarmController.py" />
     <Compile Include="Controller\Source\__init__.py" />
     <Compile Include="Controller\__init__.py" />
@@ -48,6 +49,10 @@
     <Compile Include="Logging\Source\__init__.py" />
     <Compile Include="Logging\__init__.py" />
     <Compile Include="pyAlarm.py" />
+    <Compile Include="UI\Source\kivyCreate.py" />
+    <Compile Include="UI\Source\kivyUpdate.py" />
+    <Compile Include="UI\Source\__init__.py" />
+    <Compile Include="UI\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\Source" />

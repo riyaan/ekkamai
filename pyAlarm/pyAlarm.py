@@ -36,12 +36,11 @@ logger.Log("Continuing 'Main' thread execution.")
 ### Alarm Creation Begin
 
 ALARM_NAME = "myFirstAlarm"
-successfulRequest = ""
 
 alarmController = Alarm()
 
 try:
-    successfulRequest = alarmController.NewAlarmRequest(ALARM_NAME)
+    alarmController.NewAlarmRequest(ALARM_NAME)
 except InsufficientStorageSpaceAvailableException:
     pyGlobals.IS_RUNNING = False
     logger.Log("Shutting down...", pyGlobals.ERROR_LOG_LEVEL)
