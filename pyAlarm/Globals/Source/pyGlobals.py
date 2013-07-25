@@ -1,6 +1,5 @@
 from os import path
 
-#def __init__():
 global IS_RUNNING
 IS_RUNNING = True
 
