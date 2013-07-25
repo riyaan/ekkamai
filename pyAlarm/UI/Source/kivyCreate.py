@@ -12,11 +12,19 @@ sys.path.append("C:\Projects\Kivy\Alarm\pyAlarm")
 from Controller.Source.AlarmController import Alarm
 from Exceptions.Source.pyException import *
 
+kivyAppInstance = ""
+
 class CreateScreen(GridLayout):
-    """description of class"""
+    """description of class"""    
 
     lblAlarmName = Label(text="Alarm Name: ")
     txtAlarmName = TextInput()
+
+    lblRepeat = Label()
+    chkRepeat = CheckBox(text="Repeat?")
+
+    lblDay = Label(text="Day")
+    txtDay = TextInput()
 
     sldVolume = Slider(min=0, max=100, value=25)
 
@@ -25,11 +33,13 @@ class CreateScreen(GridLayout):
 
     lblResults = Label()
 
-    def sliderCallback(self):
-        #self.lblResults.text = instance.value
-        pass
+    def on_touch_move(self, touch):
+        self.lblResults.text = "Coords - x:{0} ___ y:{1}".format(touch.x, touch.y)
 
-    def callback(self, instance):
+    def cancelCallback(self, instance):
+        kivyAppInstance.stop()
+
+    def saveCallback(self, instance):
         self.CreateAlarm()
         self.lblResults.text = "Thanks! Alarm name is {0}".format(self.txtAlarmName.text)
 
@@ -46,20 +56,20 @@ class CreateScreen(GridLayout):
         self.add_widget(self.lblAlarmName)
         self.add_widget(self.txtAlarmName)
 
-        self.add_widget(Label(text="Repeat?", halign="left"))
-        self.add_widget(CheckBox())
+        self.add_widget(self.lblRepeat)
+        self.add_widget(self.chkRepeat)
 
-        self.add_widget(Label(text="Day", halign="left"))
+        self.add_widget(self.lblDay)
+        self.add_widget(self.txtDay)
+
+        self.add_widget(Label(text="Time"))
         self.add_widget(TextInput())
 
-        self.add_widget(Label(text="Time", halign="left"))
-        self.add_widget(TextInput())
-
-        self.add_widget(Label(text="Volume", halign="left"))
-        self.sldVolume.bind(on_touch_move=self.sliderCallback)
+        self.add_widget(Label(text="Volume"))        
         self.add_widget(self.sldVolume)
 
-        self.btnSave.bind(on_press=self.callback)
+        self.btnCancel.bind(on_press=self.cancelCallback)
+        self.btnSave.bind(on_press=self.saveCallback)
         self.add_widget(self.btnCancel)
         self.add_widget(self.btnSave)
 
@@ -91,4 +101,5 @@ class KivyAlarmAppCreate(App):
         return CreateScreen()
 
 if __name__ == "__main__":
-    KivyAlarmAppCreate().run()
+    kivyAppInstance = KivyAlarmAppCreate()
+    kivyAppInstance.run()
