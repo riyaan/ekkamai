@@ -6,10 +6,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.slider import Slider
 from kivy.uix.textinput import TextInput
 
-import os, sys
-print "Path: %s" % os.path
-print "Current script path: %s" % os.path.dirname(os.path.abspath(__file__))
-
+import sys
 sys.path.append("C:\Projects\Kivy\Alarm\pyAlarm")
 
 from Controller.Source.AlarmController import Alarm
@@ -21,16 +18,26 @@ class CreateScreen(GridLayout):
     lblAlarmName = Label(text="Alarm Name: ")
     txtAlarmName = TextInput()
 
-    lblSave = Label()
+    sldVolume = Slider(min=0, max=100, value=25)
+
+    btnCancel = Button(text="Cancel")
     btnSave = Button(text="Save")
+
+    lblResults = Label()
+
+    def sliderCallback(self):
+        #self.lblResults.text = instance.value
+        pass
 
     def callback(self, instance):
         self.CreateAlarm()
-        self.lblSave.text = "Thanks! Alarm name is {0}".format(self.txtAlarmName.text)
+        self.lblResults.text = "Thanks! Alarm name is {0}".format(self.txtAlarmName.text)
 
     def __init__(self, **kwargs):        
 
         super(CreateScreen, self).__init__(**kwargs)
+
+        # region Setup widgets
         self.cols = 2
         self.row_force_default=True
         self.row_default_height=40
@@ -49,15 +56,20 @@ class CreateScreen(GridLayout):
         self.add_widget(TextInput())
 
         self.add_widget(Label(text="Volume", halign="left"))
-        self.add_widget(Slider())
+        self.sldVolume.bind(on_touch_move=self.sliderCallback)
+        self.add_widget(self.sldVolume)
 
         self.btnSave.bind(on_press=self.callback)
-        self.add_widget(self.lblSave)
+        self.add_widget(self.btnCancel)
         self.add_widget(self.btnSave)
+
+        self.add_widget(self.lblResults)
+
+        # End Setup widgets
 
     def CreateAlarm(self):
 
-        alarm = Alarm()        
+        alarm = Alarm()
 
         try:
             alarm.NewAlarmRequest(self.txtAlarmName.text)
